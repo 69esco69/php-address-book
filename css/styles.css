@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700");
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, input, button {
+  font-family: 'Comfortaa', cursive;
+}
+
+form {
+  width: 540px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 15px 0px;
+  margin-bottom: 15px;
+  text-indent: 20px;
+}
+
+.message {
+  text-align: center;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 540px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #814b5f;
+  min-height: 100vh;
+}
+
+.container header {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: space-between;
+}
+
+.container header a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: #814b5f;
+  line-height: 50px;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+}
+
+.container header .cta a {
+  margin-left: 15px;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #814b5f;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.user-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.user-unit:hover {
+  background: #603243;
+}
+
+.user-unit img {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.user-unit .name {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.user-unit .email {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.user-unit .phone_number {
+  font-size: 20px;
+}
+
+.user-unit .edit-btn {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  padding: 5px 10px;
+  position: absolute;
+  background: white;
+  top: 20px;
+  right: 50px;
+}
+
+.user-unit.edit {
+  display: block;
+  text-align: center;
+}
+
+.user-unit.edit img {
+  width: 250px;
+}
+
+.search-wrap {
+  padding: 10px 20px;
+}
+
+.search-wrap input {
+  width: 100%;
+  padding: 15px 0px;
+  text-indent: 20px;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+}
