@@ -1,5 +1,5 @@
 <?php 
-
+	session_start();
 	include "dbh.php";
  ?>
 
@@ -16,13 +16,4 @@
 <body>
 	
 	<div class="container">
-		<header>
-			<a href="index.php"><i class='fa fa-home'></i></a>
-
-			<div class="cta">
-				<a href="search.php"><i class='fa fa-search'></i></a>
-				<a href="add.php"><i class='fa fa-plus'></i></a>
-			</div>
-		</header>
 		
-		<div id="result">

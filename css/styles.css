@@ -26,6 +26,20 @@ form input {
   text-indent: 20px;
 }
 
+form span {
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+form a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+
 .message {
   text-align: center;
   color: red;
@@ -38,6 +52,7 @@ form input {
   margin: 0 auto;
   background: #814b5f;
   min-height: 100vh;
+  padding: 15px 0px;
 }
 
 .container header {

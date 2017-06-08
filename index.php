@@ -1,11 +1,31 @@
 <?php 
 	
 	include "header.php";
+
+
  ?>
 
-			<?php 
+			<?php
 
-				$sql ="SELECT * FROM contacts LIMIT 4";
+				$url = $_SERVER['REQUEST_URI'];
+
+				if(strpos($url, 'error') !== false) {
+					echo "<p class='message'>username and password incorrect</p>"; 
+				} 
+				if(isset($_SESSION['id'])) {
+
+					echo "<header>
+			<a href='index.php'><i class='fa fa-home'></i></a>
+
+			<div class='cta'>
+				<a href='search.php'><i class='fa fa-search'></i></a>
+				<a href='add.php'><i class='fa fa-plus'></i></a>
+				<a href='includes/logout.inc.php'><i class='fa fa-sign-out'></i></a>
+			</div>
+		</header>
+		
+		<div id='result'>";
+					$sql ="SELECT * FROM contacts LIMIT 4";
 				$result = mysqli_query($conn, $sql);
 				$check = mysqli_num_rows($result);
 
@@ -28,16 +48,33 @@
 
 						echo "</div>"; //end user-unit
 
+						
+
 					}
 				}
 
-			 ?>
-		</div>
-		<div class="button-wrapper">
+				echo "</div>"; //end result
+								echo"<div class='button-wrapper'>
 			
-			<button id='btn'>Load Mores</button>
-		</div>
+									<button id='btn'>Load Mores</button>
+								</div>";	
+				} else {
+					echo "<h1 class='title'>Login</h1>";
 
+					echo "<form method='POST' action='includes/login.inc.php'>
+
+						<input type='text' name='email' placeholder='email'>
+						<input type='password' name='pwd' placeholder='password'>
+						<button type='submit' name='loginSubmit'>login</button> <span>or</span><a href='signup.php'>Signup</a>
+					</form>";
+				}
+				
+
+			 ?>
+
+
+		</div>
+		
 
 
 	</div>
